@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import useToggle from '../hooks/useToggle';
+import useToggle from '../../hooks/useToggle';
 
 const MenuContext = createContext()
 export { MenuContext }
@@ -9,7 +9,7 @@ export default function Menu({children, onOpen, styles = ''}) {
 
     return (
         <MenuContext.Provider value={{open, toggleOpen}}>
-            <div className={`relative ${styles}`}>
+            <div className={`relative shadow-2xl ${styles}`}>
                 {children}
             </div>
         </MenuContext.Provider>
