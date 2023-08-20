@@ -1,8 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Header from './components/Header'
-import AuthProvider from './context/AuthProvider' // only nesessary for client components.
-import { Providers } from './GlobalRedux/provider'
+import Header from './_components/Header'
+import AuthProvider from './_context/AuthProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,18 +13,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-          <div className="min-h-screen grid">
-            <AuthProvider>
-              <Header />
-              <main>
-                <Providers>
-                  {children}
-                </Providers>
-              </main>
-            </AuthProvider>
-          </div>
-      </body>
-    </html>
+        <body className={inter.className}>
+            <div className="min-h-screen grid">
+              <AuthProvider>
+                <Header />
+                <main>
+                    {children}
+                </main>
+              </AuthProvider>
+            </div>
+        </body>
+      </html>
   )
 }
