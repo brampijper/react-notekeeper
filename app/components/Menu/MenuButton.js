@@ -6,10 +6,8 @@ export default function MenuButton({children}) {
 
     return (
         <button onClick={toggleOpen} 
-            className="flex items-center px-3 py-3 bg-gray-300 text-slate-900 rounded-md"
+            className="flex items-center px-2 py-1 rounded-md hover:bg-gray-200"
         >
-            Menu
-
             {children}
         </button>
     )

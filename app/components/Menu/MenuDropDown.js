@@ -6,7 +6,7 @@ export default function MenuDropDown({ children }) {
     return (
         <>
             { open && (
-                <div className="absolute -left-[50px] mt-1 bg-white border border-gray-100 rounded-md shadow divide-y divide-slate-200">
+                <div className="absolute -left-[175px] mt-3 bg-white border border-gray-100 rounded-md shadow divide-y divide-slate-200 w-56">
                     {children}
                 </div>
             )}
