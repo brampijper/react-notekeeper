@@ -1,5 +1,3 @@
-'use client'
-
 import Menu from "./Menu"
 import MenuButton from "./MenuButton"
 import MenuDropDown from "./MenuDropDown"
